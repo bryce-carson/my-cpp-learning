@@ -1,0 +1,3 @@
+/home/cyber/CLionProjects/first_steps/cmake-build-debug/CMakeFiles/first_steps.dir
+/home/cyber/CLionProjects/first_steps/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cyber/CLionProjects/first_steps/cmake-build-debug/CMakeFiles/rebuild_cache.dir
