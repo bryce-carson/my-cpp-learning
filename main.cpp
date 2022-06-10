@@ -127,5 +127,148 @@ int main() {
     << "4\t" << four << endl
     << "5\t" << five << endl;
 
+    // 2.4
+    // 21
+    int score = 98;
+    if (score > 100)
+        cout << "High\n";
+    else
+        cout << "Low\n";
+
+    // 22
+    double savings (100.00), expenses (98.00);
+    if (savings >= expenses) {
+        cout << "Solvent\n";
+        savings -= expenses;
+        expenses = 0;
+    }
+    else {
+        cout << "Bankrupt\n";
+    }
+
+    // 23
+    int exam_score = 60, programs_done = 12;
+    if ((exam_score >= 60) && (programs_done >= 10))
+        cout << "Passed\n";
+    else
+        cout << "Failed\n";
+
+    // 24
+    int temperature (100), pressure (200);
+    if ((temperature >= 100) || (pressure >= 200))
+        cout << "Warning\n";
+    else
+        cout << "OK\n";
+
+    // 25
+    double quadratic_function_input (4.0),
+           quadratic_function_output (quadratic_function_input * quadratic_function_input - quadratic_function_input - 2);
+    if ((quadratic_function_output < (-1)) || (quadratic_function_output > 2))
+        cout << "The function output is POSITIVE; x = ";
+    else
+        cout << "The function output is NEGATIVE; x = ";
+    cout
+    << quadratic_function_input
+    << ", and y = "
+    << quadratic_function_output << ".\n";
+
+    // 26
+    quadratic_function_input = 11.0;
+    quadratic_function_output = ((quadratic_function_input * quadratic_function_input)
+                                          - (4 * quadratic_function_input)
+                                          + 3);
+    if ((quadratic_function_output > 1) &&
+        (quadratic_function_output < 3))
+        cout << "The function output is NEGATIVE; x = ";
+    else
+        cout << "The function output is POSITIVE; x = ";
+    cout
+    << quadratic_function_input
+    << ", and y = "
+    << quadratic_function_output << ".\n";
+
+    /* 27
+     * a.)  zero is the false (integer) value in C++, so when used as a boolean expression, the 'else' statement will always be executed and the statement: 'cout << "0 is false.";' will always be executed.
+     * b.)  non-zero integers, when evaluated as boolean expressions, are always coerced to 'true', so the 'cout << "1 is true";' statement will always be executed.
+     * c.)  I recalled that non-zero integers are 'true' in C++, but I did need to review the _Type Compatibilities_ section to see, of course, that "_any_ non-zero integer" (emphasis added) is coerced to 'true' in C++, not just positive, non-zero integers. */
+
+    /* 28
+     * The output of the while loop is the following:
+     * 10
+     * 7
+     * 4
+     * 1.
+     * At the end of the while loop 'x' has the value '-2', but this does not satisfy the boolean expression of the
+     * while loop, so no further output is produced. If the value of 'x' was used again, the value '-2' would propagate
+     * into later usages. */
+
+    /* 29
+     * If the boolean expression '(x > 0)' were modified to check if 'x' is less than zero, no output would be produced,
+     * and the initialized value of 'x = 10;' would not be changed.
+     */
+
+    /* 30
+     * The output of this program is the same as the program in question 28, but the boolean expression is not evaluated
+     * the before the compound statement is executed the first time, so were 'x' initialized to any integer value it
+     * would be sent to the 'cout' stream, and its value would be reduced by 3 regardless of the initial value. Then the
+     * boolean expression would be checked before any following iterations of the 'while' part of the _do-while_ loop.
+     * As an example, if 'x' were intialized to '1', '1' would be sent to the 'cout' stream, then 'x' would be reduced
+     * by '3', and its new value would be '-2'; this would not satisfy the boolean expression for the first iteration of
+     * the 'while' part of the _do-while_ loop, so the compound statement would not be executed again and the program
+     * would continue past the _do_while_ looping statement.
+     */
+
+    /* 31
+     * The output of this program, like the example I detailed in my answer to question thirty, would be:
+     * '-42'. No further output would be produced, because the first iteration of the 'while' component of the
+     * _do-while_ loop would never occur because the changed value of the variable 'x' would be less than zero, not
+     * satisfying the boolean expression.
+     */
+
+    /* 32
+     * The important difference between a _do-while_ statement and a _while_ statement is that the compound statement,
+     * or single statement, of a _do-while_ loop is executed once without evaluating the boolean expression. The
+     * compound statement associated with the loop is always executed once before the boolean expression is executed, so
+     * the 'loop' may never actually occur, and the compound statement is only _done_ ('do') once.
+     */
+
+    /* 33
+     * The output of this program would be the initial value of 'x', which is '10', then '13', '16', '19', '22', and so
+     * on towards positive infinity because the variable 'x' used by the boolean statement is never modified in such a
+     * way that it will cause the boolean expression to evaluate to 'false', so it is an infinite loop.
+     */
+
+    // 34
+    int loop_sentinel = 1;
+    while (loop_sentinel < 21) {
+        cout << loop_sentinel << endl;
+        loop_sentinel++;
+    }
+
+    // 35
+    int x = 5;
+    if (x < 0) {
+        x = 7;
+        cout << "x is now positive.";
+    }
+    else {
+        x = -7;
+        cout << "x is now negative.";
+    }
+
+    /* 36
+     * The output of this program would be:
+     * Self-Test Exercise
+     */
+
+    // 37
+    const double liters_per_gallon = 3.78533;
+    double gallons_input;
+    cout << "Enter a number of gallons, then press 'Enter': ";
+    cin >> gallons_input;
+    cout
+    << "The volume of whatever liquid is measured in gallons has a measure in liters of: "
+    << (gallons_input * liters_per_gallon) << endl;
+
     return 0;
 }
